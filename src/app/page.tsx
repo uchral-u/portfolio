@@ -1,62 +1,113 @@
-import React from "react";
+"use client";
 
-const page = () => {
+import React from "react";
+export default function Portfolio() {
   return (
-    <div>
-      <div className="h-20 bg-black w-full m-0 flex items-center justify-between px-10">
-        <div className=" text-white text-3xl font-bold ">Uchral</div>
-        <div className="flex gap-8 text-white text-lg">
-          <a href="#Home" className="hover:text-gray-400 transition-colors">
+    <div className="bg-black text-white min-h-screen font-sans selection:bg-gray-700">
+      {/* tses */}
+      <nav className="h-20 border-b border-white/10 flex items-center justify-between px-6 md:px-12 sticky top-0 bg-black/80 backdrop-blur-md z-50">
+        <div className="text-2xl font-bold tracking-tighter">UCHRAL</div>
+        <div className="hidden md:flex gap-10 text-sm font-medium uppercase tracking-widest">
+          <a href="#home" className="hover:text-gray-400 transition-colors">
             Home
           </a>
-          <a href="#About" className="hover:text-gray-400 transition-colors">
+          <a href="#about" className="hover:text-gray-400 transition-colors">
             About
           </a>
-          <a href="#More" className="hover:text-gray-400 transition-colors">
-            What i do
+          <a href="#projects" className="hover:text-gray-400 transition-colors">
+            Projects
           </a>
         </div>
-      </div>
-      <section className="min-h-screen bg-[#222222] flex items-center justify-center p-8 font-sans">
-        <div className="max-w-6xl w-full flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="flex-1 text-white space-y-6">
-            <h1 className="text-6xl md:text-7xl font-extrabold tracking-tight">
-              My Portfolio <br /> Website
-            </h1>
+      </nav>
 
-            <p className="text-lg md:text-xl font-medium inline-block pb-1">
-              Welcome to my portfolio
-            </p>
-
-            <div className="pt-4">
-              <a
-                href="#"
-                className="bg-[#65B723] hover:bg-[#549a1d] text-white px-8 py-4 rounded-full text-xl font-bold transition-transform hover:scale-105 inline-block"
-              >
-                Go to portfolio
-              </a>
-            </div>
-          </div>
-
-          {/* <div className="flex-1 flex justify-center md:justify-end">
-      <div className="w-72 h-72 md:w-120 md:h-120">
-          <img 
-            src="your-avatar-image.png" 
-            alt="Portfolio Avatar" 
-            className="w-full h-full object-contain"
-          />
-      </div>
-    </div> */}
+      {/* Home heseg */}
+      <section
+        id="home"
+        className="min-h-[calc(100vh-80px)] flex flex-col justify-center px-6 md:px-12"
+      >
+        <p className="text-gray-400 font-mono mb-4">This is my portfolio</p>
+        <h1 className="text-5xl md:text-8xl font-black leading-none mb-6">
+          <span className="text-gray-500">I AM UCHRAL</span>
+        </h1>
+        <p className="max-w-xl text-gray-400 text-lg md:text-xl leading-relaxed">
+          Би бол frontend хөгжүүлэгч болох гээд хичээж байгаа хүн
+        </p>
+        <div className="mt-10">
+          <a
+            href="#projects"
+            className="bg-white text-black px-8 py-4 font-bold uppercase hover:bg-gray-200 transition-all"
+          >
+            See My Work
+          </a>
         </div>
       </section>
 
-      <div>
-        <h1 className=" text-white text-3xl md:text-3xl font-extrabold tracking-tight flex justify-center py-7">What I Do</h1>
-        <div className="min-h-screen bg-[#222222] flex items-center justify-center p-8 font-sans">
+      {/* minii tuhai heseg */}
+      <section id="about" className="py-32 px-6 md:px-12 bg-[#111111]">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
+          <div>
+            <h2 className="text-3xl font-bold mb-8 uppercase tracking-widest">
+              About Me
+            </h2>
+            <p className="text-gray-400 text-lg leading-relaxed mb-6">
+              Миний гол зорилго өөртөө зориулж ecommerce цахим хуудас хийж
+              борлуулалтаа өсгөх юм. Одоогоор Erxes Academy-д сурсан шинэ зүйлс:
+            </p>
+          </div>
+
+          {/* Husnegt */}
+          <div className="grid grid-cols-2 gap-4">
+            <div className="border border-white/10 p-4 rounded hover:border-white/40 transition-colors">
+              <span className="font-mono text-sm">React</span>
+            </div>
+
+            <div className="border border-white/10 p-4 rounded hover:border-white/40 transition-colors">
+              <span className="font-mono text-sm">Next.js</span>
+            </div>
+
+            <div className="border border-white/10 p-4 rounded hover:border-white/40 transition-colors">
+              <span className="font-mono text-sm">Tailwind</span>
+            </div>
+
+            <div className="border border-white/10 p-4 rounded hover:border-white/40 transition-colors">
+              <span className="font-mono text-sm">JavaScript</span>
+            </div>
+
+            <div className="border border-white/10 p-4 rounded hover:border-white/40 transition-colors">
+              <span className="font-mono text-sm">HTML</span>
+            </div>
+
+            <div className="border border-white/10 p-4 rounded hover:border-white/40 transition-colors">
+              <span className="font-mono text-sm">CSS</span>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* tusul heseg */}
+      <section id="projects" className="py-32 px-6 md:px-12">
+        <h2 className="text-3xl font-bold mb-16 uppercase tracking-widest">
+          Projects
+        </h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="group border border-white/10 p-8 rounded-lg hover:bg-[#111111] transition-all">
+            <h3 className="text-2xl font-bold mb-2">E-Commerce Site</h3>
+            <p className="text-gray-400 mb-6">Багаараа хийсэн анхны төсөл</p>
+          </div>
+
+          <div className="group border border-white/10 p-8 rounded-lg hover:bg-[#111111] transition-all">
+            <h3 className="text-2xl font-bold mb-2">Portfolio</h3>
+            <p className="text-gray-400 mb-6">
+              Өөрийгөө танилцуулах, бие даан хийж байгаа миний энэ сайт
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-20 border-t border-white/10 text-center text-gray-500">
+        <p className="text-sm uppercase tracking-widest">Built with Love.</p>
+      </footer>
     </div>
   );
-};
-
-export default page;
+}
