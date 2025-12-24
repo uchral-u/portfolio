@@ -93,7 +93,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section id="about" className="py-40 px-6 md:px-12 bg-[#0c0c0c]">
+      <section id="about" className="py-40 px-6 md:px-12 bg-[#0c0c0c] h-150">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-8 uppercase tracking-widest text-white">
             About Me
@@ -107,7 +107,80 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section id="skills" className="py-32 px-6 md:px-12 bg-black text-center">
+      <section className="py-20  bg-black overflow-hidden h-170">
+        <div className="max-w-6xl mx-auto px-6 md:px-12">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="relative h-100 flex items-center justify-center">
+              <div className="absolute transform -rotate-6 -translate-x-12 hover:rotate-0 hover:z-30 transition-all duration-500 group">
+                <div className="bg-white p-3 pb-12 shadow-2xl w-48 md:w-56 border border-gray-200">
+                  <div className="relative aspect-square overflow-hidden bg-gray-100">
+                    <Image
+                      src="/cat1.png"
+                      alt="My Cat Coding"
+                      fill
+                      className="object-cover grayscale group-hover:grayscale-0 transition-all"
+                    />
+                  </div>
+                  <p className="mt-4 text-center font-serif text-black text-lg">
+                    Coding Buddy 🐾
+                  </p>
+                </div>
+              </div>
+
+              <div className="absolute transform rotate-6 translate-x-12 hover:rotate-0 hover:z-30 transition-all duration-500 group">
+                <div className="bg-white p-3 pb-12 shadow-2xl w-48 md:w-56 border border-gray-200">
+                  <div className="relative aspect-square overflow-hidden bg-gray-100">
+                    <Image
+                      src="/cat2.png"
+                      alt="My Cat Sleeping"
+                      fill
+                      className="object-cover grayscale group-hover:grayscale-0 transition-all"
+                    />
+                  </div>
+                  <p className="mt-4 text-center font-serif text-black text-lg">
+                    Senior Manager 💤
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-500 text-xs font-bold uppercase tracking-widest">
+                Behind the Scenes
+              </div>
+              <h2 className="text-4xl font-black uppercase tracking-tighter">
+                Meet My{" "}
+                <span className="text-orange-500 text-stroke">Assistant</span>
+              </h2>
+              <p className="text-gray-400 text-lg leading-relaxed">
+                Код бичих явцад хамгийн их тусалдаг (эсвэл саад болдог 😂) миний
+                хамтрагч. Компютер дээр суух бүрт гар дээр ирж хэвтээд юу ч
+                хийлгэдэггүй. Жинхэнэ мэргэжилтэн маань.
+              </p>
+              <div className="flex gap-4">
+                <div className="flex flex-col">
+                  <span className="text-2xl font-bold">100+</span>
+                  <span className="text-xs uppercase text-gray-500 tracking-widest">
+                    Purrs per hour
+                  </span>
+                </div>
+                <div className="w-px h-10 bg-white/10"></div>
+                <div className="flex flex-col">
+                  <span className="text-2xl font-bold">0</span>
+                  <span className="text-xs uppercase text-gray-500 tracking-widest">
+                    Bugs allowed
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="skills"
+        className="py-32 px-6 md:px-12 bg-[#0c0c0c] text-center h-150"
+      >
         <h2 className="text-3xl font-bold mb-16 uppercase tracking-widest text-white">
           Skills
         </h2>
@@ -151,7 +224,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section id="projects" className="py-32 px-6 md:px-12 bg-black">
+      <section id="projects" className="py-32 px-6 md:px-12 bg-black h-200">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-16 uppercase tracking-widest text-center text-white">
             Projects
